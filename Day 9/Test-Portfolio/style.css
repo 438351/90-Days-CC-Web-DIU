@@ -1,0 +1,149 @@
+/* Custom CSS Property*/
+:root {
+    --theme-color: #5B0888;
+    --hovered-color: #3b035a;
+    --text-color: #333;
+    --white: #fff;
+    --black: #000;
+}
+
+/* Basic Setup */
+*::before,
+*::after,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Reusable Componant */
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* Header */
+.header-section{
+    width: 100%;
+    padding: 25px 0;
+    background-color: var(--white);
+}
+
+.header-section .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-section .logo a{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.header-section .logo .color-logo{
+    color: var(--theme-color);
+}
+
+.header-section .desktop-menu ul li{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.header-section .desktop-menu ul li:first-child{
+    margin-left: 0 !important;
+}
+
+.header-section .desktop-menu ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all ease 1s;
+}
+
+.header-section .desktop-menu ul li a:hover{
+    color: var(--theme-color);
+}
+
+/* Hero Section */
+.hero-section{
+    min-height: 85vh;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 80px 0;
+}
+
+.hero-section .hero-content-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hero-section .hero-text{
+    flex-basis: 68%;
+    max-width: 68%;
+}
+
+.hero-section .hero-text .meta-heading{
+    display: inline-block;
+    color: var(--theme-color);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.hero-section .hero-text h1{
+    display: block;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.hero-section .hero-text p{
+    font-size: 16px;
+    color: #777;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.hero-section .hero-text .hero-btn{
+    display: inline-block;
+    margin-top: 35px;
+    text-decoration: none;
+    color: var(--white);
+    padding: 8px 22px;
+    border: 1xp solid var(--theme-color);
+    background-color: var(--theme-color);
+    transition: all 0.5s ease;
+}
+
+.hero-section .hero-text .hero-btn:hover{
+    background-color: var(--hovered-color);
+}
+
+.hero-section .hero-text .color-heading{
+    color: var(--theme-color);
+}
+
+.hero-section .hero-image{
+    flex-basis: 30%;
+    max-width: 30%;
+}
+
+.hero-section .hero-image img{
+    max-width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 8px;
+}
